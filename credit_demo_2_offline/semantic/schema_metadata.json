@@ -1,0 +1,142 @@
+{
+  "schema_version": "semantic.v1",
+  "report_type": "individual",
+  "tables": [
+    {
+      "table": "report_basic",
+      "description": "报告基本信息，一份报告一行。",
+      "fields": {
+        "report_id": {"name_cn": "报告ID", "can_aggregate": false},
+        "report_time": {"name_cn": "报告时间", "can_aggregate": false},
+        "subject_name": {"name_cn": "被查询人姓名", "can_aggregate": false},
+        "subject_id_type": {"name_cn": "被查询人证件类型", "can_aggregate": false},
+        "subject_id_type_code": {"name_cn": "被查询人证件类型码值", "can_aggregate": false},
+        "query_reason": {"name_cn": "查询原因", "can_aggregate": false},
+        "query_reason_code": {"name_cn": "查询原因码值", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "credit_account",
+      "description": "账户主表，一行代表一个账户级记录。",
+      "fields": {
+        "account_id": {"name_cn": "账户编号", "can_aggregate": false},
+        "account_status": {"name_cn": "账户状态", "can_aggregate": false},
+        "account_status_code": {"name_cn": "账户状态码值", "can_aggregate": false},
+        "open_date": {"name_cn": "开立日期", "can_aggregate": false},
+        "close_date": {"name_cn": "关闭日期", "can_aggregate": false},
+        "account_category": {"name_cn": "账户分类", "can_aggregate": false},
+        "account_category_code": {"name_cn": "账户分类码值", "can_aggregate": false},
+        "business_type": {"name_cn": "业务种类", "can_aggregate": false},
+        "business_type_code": {"name_cn": "业务种类码值", "can_aggregate": false},
+        "is_outstanding_account": {"name_cn": "是否未结清/未销户", "can_aggregate": false},
+        "is_loan_account": {"name_cn": "是否贷款账户", "can_aggregate": false},
+        "loan_classification": {"name_cn": "贷款分类", "can_aggregate": false},
+        "five_classification": {"name_cn": "五级分类", "can_aggregate": false},
+        "five_classification_code": {"name_cn": "五级分类码值", "can_aggregate": false},
+        "guarantee_method": {"name_cn": "担保方式", "can_aggregate": false},
+        "guarantee_method_code": {"name_cn": "担保方式码值", "can_aggregate": false},
+        "balance": {"name_cn": "余额", "unit": "元", "can_aggregate": true},
+        "original_amount": {"name_cn": "借款金额", "unit": "元", "can_aggregate": true}
+      }
+    },
+    {
+      "table": "account_history",
+      "description": "账户历史表现表，一行代表某账户某时点记录。",
+      "fields": {
+        "account_id": {"name_cn": "账户编号", "can_aggregate": false},
+        "period_date": {"name_cn": "统计日期", "can_aggregate": false},
+        "repay_type": {"name_cn": "还款状态", "can_aggregate": false},
+        "repay_type_code": {"name_cn": "还款状态码值", "can_aggregate": false},
+        "five_classification": {"name_cn": "五级分类", "can_aggregate": false},
+        "five_classification_code": {"name_cn": "五级分类码值", "can_aggregate": false},
+        "overdue_total": {"name_cn": "逾期金额", "unit": "元", "can_aggregate": true},
+        "overdue_principal": {"name_cn": "逾期本金", "unit": "元", "can_aggregate": true},
+        "overdue_months": {"name_cn": "逾期月数/严重程度字段", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "query_record",
+      "description": "查询记录表，一行代表一次查询。",
+      "fields": {
+        "query_date": {"name_cn": "查询日期", "can_aggregate": false},
+        "query_reason": {"name_cn": "查询原因", "can_aggregate": false},
+        "query_reason_code": {"name_cn": "查询原因码值", "can_aggregate": false},
+        "query_type": {"name_cn": "查询类型", "can_aggregate": false},
+        "query_type_code": {"name_cn": "查询类型码值", "can_aggregate": false},
+        "query_institution": {"name_cn": "查询机构", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "identity_info",
+      "description": "身份基础信息表（报告级）。",
+      "fields": {
+        "gender": {"name_cn": "性别", "can_aggregate": false},
+        "gender_code": {"name_cn": "性别码值", "can_aggregate": false},
+        "education": {"name_cn": "学历", "can_aggregate": false},
+        "education_code": {"name_cn": "学历码值", "can_aggregate": false},
+        "degree": {"name_cn": "学位", "can_aggregate": false},
+        "degree_code": {"name_cn": "学位码值", "can_aggregate": false},
+        "employment_status": {"name_cn": "就业状况", "can_aggregate": false},
+        "employment_status_code": {"name_cn": "就业状况码值", "can_aggregate": false},
+        "communication_address": {"name_cn": "通讯地址", "can_aggregate": false},
+        "hukou_address": {"name_cn": "户籍地址", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "residence_info",
+      "description": "居住信息明细表。",
+      "fields": {
+        "residence_status": {"name_cn": "居住状况", "can_aggregate": false},
+        "residence_status_code": {"name_cn": "居住状况码值", "can_aggregate": false},
+        "residence_address": {"name_cn": "居住地址", "can_aggregate": false},
+        "update_date": {"name_cn": "信息更新日期", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "occupation_info",
+      "description": "职业信息明细表。",
+      "fields": {
+        "company_name": {"name_cn": "工作单位", "can_aggregate": false},
+        "company_nature": {"name_cn": "单位性质", "can_aggregate": false},
+        "company_nature_code": {"name_cn": "单位性质码值", "can_aggregate": false},
+        "industry": {"name_cn": "行业", "can_aggregate": false},
+        "industry_code": {"name_cn": "行业码值", "can_aggregate": false},
+        "occupation": {"name_cn": "职业", "can_aggregate": false},
+        "occupation_code": {"name_cn": "职业码值", "can_aggregate": false},
+        "company_address": {"name_cn": "单位地址", "can_aggregate": false},
+        "update_date": {"name_cn": "信息更新日期", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "special_transaction",
+      "description": "账户特殊交易明细表。",
+      "fields": {
+        "special_type": {"name_cn": "特殊交易类型", "can_aggregate": false},
+        "special_description": {"name_cn": "特殊交易说明", "can_aggregate": false},
+        "special_date": {"name_cn": "特殊交易日期", "can_aggregate": false},
+        "is_card_related": {"name_cn": "是否信用卡相关", "can_aggregate": false},
+        "has_personalized_installment": {"name_cn": "是否个性化分期", "can_aggregate": false},
+        "has_extension": {"name_cn": "是否展期", "can_aggregate": false},
+        "is_negative_event": {"name_cn": "是否负面特殊事件", "can_aggregate": false}
+      }
+    },
+    {
+      "table": "objection_record",
+      "description": "异议/标注明细表，一行代表一条标注记录；首页报告级在途异议总数优先以首页异议信息提示为准，结构化概要字段仅作对账参考。",
+      "fields": {
+        "objection_text": {"name_cn": "标注或声明内容", "can_aggregate": false},
+        "annotation_category": {"name_cn": "标注类别", "can_aggregate": false},
+        "is_objection_candidate": {"name_cn": "是否异议候选", "can_aggregate": false},
+        "is_in_transit": {"name_cn": "是否在处理期", "can_aggregate": false}
+      }
+    }
+  ],
+  "rules": [
+    "所有查询必须限定 report_id。",
+    "时间窗统计以 report_basic.report_time 为基准。",
+    "金额字段仅允许对 can_aggregate=true 的字段求和。",
+    "逾期双轨口径：普通逾期(1-7)与特殊风险状态(B/D/G)分开统计。",
+    "查询类问题优先区分 PC05 概要口径与 PH01 明细口径。",
+    "在途异议总数优先取首页异议信息提示；PG010S01 仅作结构化对账参考，POS 明细仅用于定位和解释。"
+  ]
+}

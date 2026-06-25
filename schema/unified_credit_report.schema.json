@@ -1,0 +1,1318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "unified_credit_report.schema.json",
+  "title": "Unified Credit Report Schema",
+  "description": "A minimal unified schema for individual and corporate credit-report Q&A.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "report_type",
+    "source_files",
+    "report_meta",
+    "basic_profile",
+    "derived_metrics"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Schema version for compatibility management."
+    },
+    "report_type": {
+      "type": "string",
+      "enum": [
+        "individual",
+        "corporate"
+      ]
+    },
+    "source_files": {
+      "type": "array",
+      "description": "Input files used to build the normalized JSON.",
+      "items": {
+        "$ref": "#/$defs/sourceFile"
+      },
+      "minItems": 1
+    },
+    "report_meta": {
+      "$ref": "#/$defs/reportMeta"
+    },
+    "basic_profile": {
+      "$ref": "#/$defs/basicProfile"
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/identifier"
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/address"
+      }
+    },
+    "employment": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/employmentRecord"
+      }
+    },
+    "shareholders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/shareholderRecord"
+      }
+    },
+    "management": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/managementRecord"
+      }
+    },
+    "controllers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/controllerRecord"
+      }
+    },
+    "loan_accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/loanAccount"
+      }
+    },
+    "credit_card_accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/creditCardAccount"
+      }
+    },
+    "credit_lines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/creditLine"
+      }
+    },
+    "guarantee_records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/guaranteeRecord"
+      }
+    },
+    "query_records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/queryRecord"
+      }
+    },
+    "dispute_records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/disputeRecord"
+      }
+    },
+    "public_risk_records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/publicRiskRecord"
+      }
+    },
+    "derived_metrics": {
+      "$ref": "#/$defs/derivedMetrics"
+    },
+    "risk_flags": {
+      "$ref": "#/$defs/riskFlags"
+    },
+    "raw_sections": {
+      "type": "object",
+      "description": "Optional bucket for unmodeled raw sections kept for traceability.",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "required": [
+        "path",
+        "role"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "xml",
+            "pdf",
+            "question_list",
+            "schema_dictionary",
+            "other"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "codedValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "money": {
+      "type": "object",
+      "required": [
+        "amount"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_table": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "reportMeta": {
+      "type": "object",
+      "required": [
+        "report_no"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "report_no": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ccps_report_no": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "report_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ISO-like timestamp string."
+        },
+        "query_org_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "query_reason": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "basicProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subject_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "individual",
+            "corporate",
+            null
+          ]
+        },
+        "gender": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "education": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "degree": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "employment_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "nationality": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "registered_capital": {
+          "$ref": "#/$defs/money"
+        },
+        "established_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "address_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "mailing",
+            "household",
+            "residential",
+            "work",
+            "registered",
+            "business",
+            null
+          ]
+        },
+        "full_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "province": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "district": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "employmentRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "employer_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "employer_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "industry": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "occupation": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "position": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "title": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "work_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "work_phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_year": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "shareholderRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "holder_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shareholding_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "managementRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "controllerRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "controller_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "id_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "paymentHistoryEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "month": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repayment_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "five_classification": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "overdue_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "remaining_terms": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "scheduled_payment": {
+          "$ref": "#/$defs/money"
+        },
+        "actual_payment": {
+          "$ref": "#/$defs/money"
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "loanAccount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "business_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "agreement_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "open_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "close_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maturity_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loan_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "credit_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "shared_credit_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "balance": {
+          "$ref": "#/$defs/money"
+        },
+        "latest_repayment_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "last_repayment_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "five_classification": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "repayment_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "repayment_method": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "repayment_frequency": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "guarantee_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "issue_method": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "special_transactions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/specialTransaction"
+          }
+        },
+        "payment_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paymentHistoryEntry"
+          }
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "creditCardAccount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "card_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "open_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "close_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "credit_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "shared_credit_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "used_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "avg_used_limit_6m": {
+          "$ref": "#/$defs/money"
+        },
+        "balance": {
+          "$ref": "#/$defs/money"
+        },
+        "cash_advance_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "account_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "repayment_status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "five_classification": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "special_transactions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/specialTransaction"
+          }
+        },
+        "payment_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/paymentHistoryEntry"
+          }
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "specialTransaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transaction_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "transaction_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/money"
+        },
+        "periods": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "creditLine": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "agreement_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "credit_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "org_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "credit_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "balance": {
+          "$ref": "#/$defs/money"
+        },
+        "open_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maturity_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "guaranteeRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "guarantee_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "business_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "guarantee_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "balance": {
+          "$ref": "#/$defs/money"
+        },
+        "five_classification": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "overdue_flag": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "queryRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "query_org_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "query_org_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "query_reason": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "query_channel": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "disputeRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dispute_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "dispute_content": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "added_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "related_object_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "publicRiskRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "risk_type": {
+          "$ref": "#/$defs/codedValue"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/money"
+        },
+        "effective_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        }
+      }
+    },
+    "derivedMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "overdue_summary": {
+          "$ref": "#/$defs/overdueSummary"
+        },
+        "loan_summary": {
+          "$ref": "#/$defs/loanSummary"
+        },
+        "credit_summary": {
+          "$ref": "#/$defs/creditSummary"
+        },
+        "query_summary": {
+          "$ref": "#/$defs/querySummary"
+        },
+        "guarantee_summary": {
+          "$ref": "#/$defs/guaranteeSummary"
+        }
+      }
+    },
+    "overdueWindow": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/money"
+        },
+        "max_consecutive_months": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "overdueSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "has_overdue_24m": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "all_time_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "all_time_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "last_6m": {
+          "$ref": "#/$defs/overdueWindow"
+        },
+        "last_12m": {
+          "$ref": "#/$defs/overdueWindow"
+        },
+        "last_24m": {
+          "$ref": "#/$defs/overdueWindow"
+        }
+      }
+    },
+    "loanSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "total_account_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "open_account_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "closed_account_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "total_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "total_balance": {
+          "$ref": "#/$defs/money"
+        },
+        "new_loan_count_1m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "new_loan_count_3m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "new_loan_count_6m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "closed_loan_count_1m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "closed_loan_count_3m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "closed_loan_count_6m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "creditSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "card_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "total_credit_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "total_used_limit": {
+          "$ref": "#/$defs/money"
+        },
+        "avg_used_limit_6m": {
+          "$ref": "#/$defs/money"
+        },
+        "utilization_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "has_negative_special_transactions_24m": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "querySummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query_count_1m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "query_count_3m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "query_count_6m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "query_count_12m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "query_count_24m": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "microloan_query_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "financing_guarantee_query_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "financial_leasing_query_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "guaranteeSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "guarantee_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "guarantee_total_amount": {
+          "$ref": "#/$defs/money"
+        },
+        "guarantee_total_balance": {
+          "$ref": "#/$defs/money"
+        },
+        "has_overdue_guarantee": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "riskFlags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "has_abnormal_five_classification": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_in_progress_dispute": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_public_risk_record": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_dense_recent_queries": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_negative_special_transaction": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5269 @@
+{
+  "generated_at": "2026-05-14T22:03:29",
+  "source_dir": "credit_report/data_recource/码表",
+  "documents": [
+    {
+      "doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "exists": true,
+      "tables_extracted": 65,
+      "rows_extracted": 509
+    },
+    {
+      "doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "exists": true,
+      "tables_extracted": 5,
+      "rows_extracted": 44
+    },
+    {
+      "doc": "征信系统数据查询接口规格说明（本机构数据）.pdf",
+      "exists": true,
+      "tables_extracted": 3,
+      "rows_extracted": 17
+    },
+    {
+      "doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "exists": true,
+      "tables_extracted": 38,
+      "rows_extracted": 156
+    },
+    {
+      "doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "exists": true,
+      "tables_extracted": 5,
+      "rows_extracted": 114
+    }
+  ],
+  "table_count": 114,
+  "row_count": 842,
+  "tables": [
+    {
+      "table_id": "8.1",
+      "title": "个人证件类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "source_page": 27,
+      "row_count": 11,
+      "rows": [
+        {
+          "code": "1",
+          "label": "户口簿",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "护照",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "港澳居民来往内地通行证",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "台湾同胞来往内地通行证",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "外国人居留证",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "警官证",
+          "description": ""
+        },
+        {
+          "code": "A",
+          "label": "香港身份证",
+          "description": ""
+        },
+        {
+          "code": "B",
+          "label": "澳门身份证",
+          "description": ""
+        },
+        {
+          "code": "C",
+          "label": "台湾身份证",
+          "description": ""
+        },
+        {
+          "code": "X",
+          "label": "其他证件",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "军人身份证件（一代中的“3-军官证”“4-士兵证”均对应此代码）",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "8.2",
+      "title": "企业登记注册类型代码",
+      "source_doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "source_page": 27,
+      "row_count": 13,
+      "rows": [
+        {
+          "code": "10",
+          "label": "中征码（原贷款卡编码）",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "统一社会信用代码",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "组织机构代码",
+          "description": ""
+        },
+        {
+          "code": "01",
+          "label": "工商注册号",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "机关和事业单位登记号",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "社会团体登记号",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "民办非企业登记号",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "基金会登记号",
+          "description": ""
+        },
+        {
+          "code": "06",
+          "label": "宗教证书登记号",
+          "description": ""
+        },
+        {
+          "code": "07",
+          "label": "律师事务所执业许可证号",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "司法鉴定许可证号",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "纳税人识别号（国税）",
+          "description": ""
+        },
+        {
+          "code": "42",
+          "label": "纳税人识别号（地税）",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "8.3",
+      "title": "批量文件处理状态代码",
+      "source_doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "source_page": 27,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "00",
+          "label": "接收成功等待处理",
+          "description": ""
+        },
+        {
+          "code": "01",
+          "label": "文件读取失败",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "文件级校验错误",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "成功处理结果未发送",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "成功处理结果已发送",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "处理中",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "8.4",
+      "title": "修改结果代码",
+      "source_doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "source_page": 28,
+      "row_count": 19,
+      "rows": [
+        {
+          "code": "0",
+          "label": "成功",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "用户名在系统内不存在，失败",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "原密码有误，失败",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "新密码不符合要求，失败",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "处理信息代码",
+          "description": ""
+        },
+        {
+          "code": "A",
+          "label": "通用",
+          "description": ""
+        },
+        {
+          "code": "B",
+          "label": "信用数据采集业务",
+          "description": ""
+        },
+        {
+          "code": "D",
+          "label": "信用报告查询业务",
+          "description": ""
+        },
+        {
+          "code": "E",
+          "label": "重要信息提示查询业务",
+          "description": ""
+        },
+        {
+          "code": "F",
+          "label": "信用报告数字解读业务",
+          "description": ""
+        },
+        {
+          "code": "G",
+          "label": "异议处理服务业务",
+          "description": ""
+        },
+        {
+          "code": "B",
+          "label": "业务处理规则",
+          "description": ""
+        },
+        {
+          "code": "T",
+          "label": "技术处理规则",
+          "description": ""
+        },
+        {
+          "code": "M",
+          "label": "报文头处理规则",
+          "description": ""
+        },
+        {
+          "code": "F",
+          "label": "文件处理规则",
+          "description": ""
+        },
+        {
+          "code": "H",
+          "label": "文件头处理规则",
+          "description": ""
+        },
+        {
+          "code": "N",
+          "label": "文件名处理规则",
+          "description": ""
+        },
+        {
+          "code": "E",
+          "label": "数据项处理规则",
+          "description": ""
+        },
+        {
+          "code": "O",
+          "label": "其他处理规则",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "9.2",
+      "title": "通用处理信息代码",
+      "source_doc": "征信系统数据查询接口规格说明（通用要求）2019-09.pdf",
+      "source_page": 29,
+      "row_count": 63,
+      "rows": [
+        {
+          "code": "AAA000",
+          "label": "查询成功",
+          "description": ""
+        },
+        {
+          "code": "AAA001",
+          "label": "处理成功，但无查询结果",
+          "description": ""
+        },
+        {
+          "code": "AAA002",
+          "label": "处理成功，但密码修改失败",
+          "description": ""
+        },
+        {
+          "code": "AAA003",
+          "label": "密码修改成功",
+          "description": ""
+        },
+        {
+          "code": "ATF001",
+          "label": "无法识别的文件",
+          "description": ""
+        },
+        {
+          "code": "ATF002",
+          "label": "文件解密出错",
+          "description": ""
+        },
+        {
+          "code": "ATF003",
+          "label": "文件解压出错",
+          "description": ""
+        },
+        {
+          "code": "ATF004",
+          "label": "文件格式错",
+          "description": ""
+        },
+        {
+          "code": "ATO001",
+          "label": "系统繁忙",
+          "description": ""
+        },
+        {
+          "code": "ATO002",
+          "label": "请求正在处理中尚未处理完毕，请稍后再试",
+          "description": ""
+        },
+        {
+          "code": "ATO003",
+          "label": "通信异常",
+          "description": ""
+        },
+        {
+          "code": "ATO004",
+          "label": "数据库错误",
+          "description": ""
+        },
+        {
+          "code": "ATO005",
+          "label": "系统错误",
+          "description": ""
+        },
+        {
+          "code": "ATO006",
+          "label": "数字签名证书与接口用户不匹配",
+          "description": ""
+        },
+        {
+          "code": "ATO007",
+          "label": "数字签名验证未通过",
+          "description": ""
+        },
+        {
+          "code": "ATO008",
+          "label": "数字签名信息不存在",
+          "description": ""
+        },
+        {
+          "code": "ATO009",
+          "label": "数字签名域信息格式错误",
+          "description": ""
+        },
+        {
+          "code": "ATO999",
+          "label": "其它错误",
+          "description": ""
+        },
+        {
+          "code": "ABE001",
+          "label": "接口密码错误",
+          "description": ""
+        },
+        {
+          "code": "ABE002",
+          "label": "接口用户在征信系统中不存在",
+          "description": ""
+        },
+        {
+          "code": "ABE003",
+          "label": "接口用户没有操作权限",
+          "description": ""
+        },
+        {
+          "code": "ABE004",
+          "label": "接口用户被锁定",
+          "description": ""
+        },
+        {
+          "code": "ABE005",
+          "label": "查询机构与查询用户关系不匹配",
+          "description": ""
+        },
+        {
+          "code": "ABE006",
+          "label": "接口密码过期",
+          "description": ""
+        },
+        {
+          "code": "ABE008",
+          "label": "机构代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABE009",
+          "label": "用户名与身份认证信息不一致",
+          "description": ""
+        },
+        {
+          "code": "ABO001",
+          "label": "系统当前非工作状态",
+          "description": ""
+        },
+        {
+          "code": "ABM001",
+          "label": "报文头长度错误",
+          "description": ""
+        },
+        {
+          "code": "ABM002",
+          "label": "报文头的字符不合法",
+          "description": ""
+        },
+        {
+          "code": "ABM00",
+          "label": "3",
+          "description": "报文头中起始标识校验错误"
+        },
+        {
+          "code": "ABM00",
+          "label": "4",
+          "description": "报文头中报文格式版本号校验错误"
+        },
+        {
+          "code": "ABM",
+          "label": "005",
+          "description": "报文头中报文发送机构代码校验错误"
+        },
+        {
+          "code": "ABM00",
+          "label": "6",
+          "description": "报文头中报文接收机构代码校验错误"
+        },
+        {
+          "code": "ABM00",
+          "label": "7",
+          "description": "报文头中报文生成时间校验错误"
+        },
+        {
+          "code": "ABM00",
+          "label": "8",
+          "description": "报文头中报文类型校验错误"
+        },
+        {
+          "code": "ABM00",
+          "label": "9",
+          "description": "报文头中报文标识号校验错误"
+        },
+        {
+          "code": "ABM0",
+          "label": "10",
+          "description": "报文头中预留字段校验错误"
+        },
+        {
+          "code": "ABM0",
+          "label": "11",
+          "description": "报文头中结束标识校验错误"
+        },
+        {
+          "code": "ABN001",
+          "label": "文件名长度错误",
+          "description": ""
+        },
+        {
+          "code": "ABN002",
+          "label": "文件名的字符不合法",
+          "description": ""
+        },
+        {
+          "code": "ABN003",
+          "label": "文件名必须和本机构以前所有文件的文件名不重复",
+          "description": ""
+        },
+        {
+          "code": "ABN004",
+          "label": "文件名中查询机构与征信系统登记的查询机构不一致",
+          "description": ""
+        },
+        {
+          "code": "ABN005",
+          "label": "文件名中查询机构不存在",
+          "description": ""
+        },
+        {
+          "code": "ABN006",
+          "label": "文件名中文件生成日期格式错误或大于当前日期",
+          "description": ""
+        },
+        {
+          "code": "ABN007",
+          "label": "文件名中文件类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABN008",
+          "label": "文件名中流水号校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABN009",
+          "label": "文件名中反馈标识校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABN010",
+          "label": "文件名不存在",
+          "description": ""
+        },
+        {
+          "code": "ABN999",
+          "label": "文件名校验其他错误",
+          "description": ""
+        },
+        {
+          "code": "ABH001",
+          "label": "文件头长度错误",
+          "description": ""
+        },
+        {
+          "code": "ABH002",
+          "label": "文件头的字符不合法",
+          "description": ""
+        },
+        {
+          "code": "ABH003",
+          "label": "组成文件头的数据项不符合规范要求",
+          "description": ""
+        },
+        {
+          "code": "ABH004",
+          "label": "文件头中起始标识校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH005",
+          "label": "文件头中文件格式版本号校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH006",
+          "label": "文件头中查询机构校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH007",
+          "label": "文件头中文件生成时间校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH008",
+          "label": "文件头中文件类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH009",
+          "label": "文件头中查询记录笔数校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH010",
+          "label": "文件头中预留字段校验错误",
+          "description": ""
+        },
+        {
+          "code": "ABH999",
+          "label": "文件头校验其他错误",
+          "description": ""
+        },
+        {
+          "code": "ABF001",
+          "label": "文件头与文件体之间必须用一个回车换行符（“﹨r﹨n”）分隔",
+          "description": ""
+        },
+        {
+          "code": "ABF002",
+          "label": "信息记录与信息记录之间必须用一个回车换行符（“﹨r﹨n”）分隔",
+          "description": ""
+        },
+        {
+          "code": "ABF003",
+          "label": "信息记录格式错误或报文体格式错误",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.1",
+      "title": "个人身份证件类型代码",
+      "source_doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "source_page": 26,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "A.1",
+      "title": "身份类别代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 56,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自然人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "组织机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.10",
+      "title": "分数影响因素说明代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 58,
+      "row_count": 21,
+      "rows": [
+        {
+          "code": "00",
+          "label": "无影响因素",
+          "description": ""
+        },
+        {
+          "code": "01",
+          "label": "存在逾期还款记录",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "存在展期记录",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "当前债务相对较多",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "当前信用卡债务笔数相对较多",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "当前债务笔数相对较多",
+          "description": ""
+        },
+        {
+          "code": "06",
+          "label": "当前信用卡额度使用率相对较高",
+          "description": ""
+        },
+        {
+          "code": "07",
+          "label": "信用历史较短",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "信用卡历史较短",
+          "description": ""
+        },
+        {
+          "code": "09",
+          "label": "近期新增债务笔数较多",
+          "description": ""
+        },
+        {
+          "code": "10",
+          "label": "近期硬查询次数较多",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "近期没有信用活动",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "信用活动相对较为单一",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "近期信用卡信息相对不足",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "近期贷款信息相对不足",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "近期信用信息相对不足",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "债务种类相对不够丰富",
+          "description": ""
+        },
+        {
+          "code": "91",
+          "label": "无信贷记录",
+          "description": ""
+        },
+        {
+          "code": "92",
+          "label": "信用历史小于",
+          "description": "3 个月"
+        },
+        {
+          "code": "93",
+          "label": "缺少近两年的信贷信息",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.11",
+      "title": "个人信贷交易提示业务类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 59,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "11",
+          "label": "个人住房贷款",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "个人商用房（包括商住两用房）贷款",
+          "description": ""
+        },
+        {
+          "code": "19",
+          "label": "其他类贷款",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "贷记卡",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "准贷记卡",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.12",
+      "title": "个人信贷交易提示业务大类代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 59,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "1",
+          "label": "贷款",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "信用卡",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.13",
+      "title": "个人被追偿汇总信息业务类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 59,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "资产处置业务",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "垫款业务",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.14",
+      "title": "个人逾期（透支）汇总信息账户类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 60,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "1",
+          "label": "非循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "循环额度下分账户",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "贷记卡账户",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "准贷记卡账户",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.15",
+      "title": "个人借贷交易相关还款责任类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 60,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "担保责任",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他相关还款责任",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.16",
+      "title": "后付费业务类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 60,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "电信业务",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "水电气等公用事业",
+          "description": "预留"
+        }
+      ]
+    },
+    {
+      "table_id": "A.17",
+      "title": "公共信息类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 60,
+      "row_count": 4,
+      "rows": [
+        {
+          "code": "1",
+          "label": "欠税信息",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "民事判决信息",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "强制执行信息",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "行政处罚信息",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.18",
+      "title": "机构类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 60,
+      "row_count": 18,
+      "rows": [
+        {
+          "code": "11",
+          "label": "商业银行",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "村镇银行",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "住房储蓄银行",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "外资银行",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "财务公司",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "信托公司",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "融资租赁公司",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "汽车金融公司",
+          "description": ""
+        },
+        {
+          "code": "24",
+          "label": "消费金融公司",
+          "description": ""
+        },
+        {
+          "code": "25",
+          "label": "贷款公司",
+          "description": ""
+        },
+        {
+          "code": "26",
+          "label": "金融资产管理公司",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "证券公司",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "保险公司",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "小额贷款公司",
+          "description": ""
+        },
+        {
+          "code": "52",
+          "label": "公积金管理中心",
+          "description": ""
+        },
+        {
+          "code": "53",
+          "label": "融资担保公司",
+          "description": ""
+        },
+        {
+          "code": "54",
+          "label": "保理公司",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.19",
+      "title": "个人借贷账户类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 61,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "D1",
+          "label": "非循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "R1",
+          "label": "循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "R2",
+          "label": "贷记卡账户",
+          "description": ""
+        },
+        {
+          "code": "R3",
+          "label": "准贷记卡账户",
+          "description": ""
+        },
+        {
+          "code": "R4",
+          "label": "循环额度下分账户",
+          "description": ""
+        },
+        {
+          "code": "C1",
+          "label": "催收账户",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.2",
+      "title": "个人证件类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 56,
+      "row_count": 12,
+      "rows": [
+        {
+          "code": "1",
+          "label": "户口簿",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "护照",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "港澳居民来往内地通行证",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "台湾同胞来往大陆通行证",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "外国人居留证",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "警官证",
+          "description": ""
+        },
+        {
+          "code": "A",
+          "label": "香港身份证",
+          "description": ""
+        },
+        {
+          "code": "B",
+          "label": "澳门身份证",
+          "description": ""
+        },
+        {
+          "code": "C",
+          "label": "台湾身份证",
+          "description": ""
+        },
+        {
+          "code": "X",
+          "label": "其他证件",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "军人身份证件",
+          "description": ""
+        },
+        {
+          "code": "10",
+          "label": "身份证",
+          "description": "manual_fix_from_official_appendix"
+        }
+      ]
+    },
+    {
+      "table_id": "A.2",
+      "title": "企业登记注册类型代码",
+      "source_doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "source_page": 26,
+      "row_count": 1,
+      "rows": [
+        {
+          "code": "10",
+          "label": "身份证",
+          "description": "manual_fix_from_official_appendix"
+        }
+      ]
+    },
+    {
+      "table_id": "A.20",
+      "title": "个人借贷交易业务种类代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 61,
+      "row_count": 24,
+      "rows": [
+        {
+          "code": "11",
+          "label": "个人住房商业贷款",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "个人商用房（含商住两用）贷款",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "个人住房公积金贷款",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "个人汽车消费贷款",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "个人助学贷款",
+          "description": ""
+        },
+        {
+          "code": "32",
+          "label": "国家助学贷款",
+          "description": ""
+        },
+        {
+          "code": "33",
+          "label": "商业助学贷款",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "个人经营性贷款",
+          "description": ""
+        },
+        {
+          "code": "42",
+          "label": "个人创业担保贷款",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "农户贷款",
+          "description": ""
+        },
+        {
+          "code": "52",
+          "label": "经营性农户贷款",
+          "description": ""
+        },
+        {
+          "code": "53",
+          "label": "消费性农户贷款",
+          "description": ""
+        },
+        {
+          "code": "91",
+          "label": "其他个人消费贷款",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他贷款",
+          "description": ""
+        },
+        {
+          "code": "71",
+          "label": "准贷记卡",
+          "description": ""
+        },
+        {
+          "code": "82",
+          "label": "大额专项分期卡",
+          "description": ""
+        },
+        {
+          "code": "61",
+          "label": "约定购回式证券交易",
+          "description": ""
+        },
+        {
+          "code": "62",
+          "label": "股票质押式回购交易",
+          "description": ""
+        },
+        {
+          "code": "63",
+          "label": "融资融券业务",
+          "description": ""
+        },
+        {
+          "code": "64",
+          "label": "其他证券类融资",
+          "description": ""
+        },
+        {
+          "code": "92",
+          "label": "融资租赁业务",
+          "description": "该业务属于融资租赁类业务。"
+        },
+        {
+          "code": "A1",
+          "label": "资产处置",
+          "description": "由资产管理机构处置的债务， 该业务属于资产处置"
+        },
+        {
+          "code": "B1",
+          "label": "代偿债务",
+          "description": "因代偿继承债权的债务，该业务属于垫款类业务。"
+        },
+        {
+          "code": "81",
+          "label": "贷记卡",
+          "description": "manual_fix_from_official_appendix"
+        }
+      ]
+    },
+    {
+      "table_id": "A.21",
+      "title": "个人借贷交易还款方式代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 62,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "11",
+          "label": "分期等额本息",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "分期等额本金",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "到期还本分期结息",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "等比累进分期还款",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "等额累进分期还款",
+          "description": ""
+        },
+        {
+          "code": "19",
+          "label": "其他类型分期还款",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "到期一次还本付息",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "预先付息到期还本",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "随时还",
+          "description": ""
+        },
+        {
+          "code": "29",
+          "label": "其他类型非分期还款",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "按期结息，到期还本",
+          "description": ""
+        },
+        {
+          "code": "32",
+          "label": "按期结息，自由还本",
+          "description": ""
+        },
+        {
+          "code": "33",
+          "label": "按期计算还本付息",
+          "description": ""
+        },
+        {
+          "code": "39",
+          "label": "循环贷款下其他还款方式",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "不区分还款方式",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.22",
+      "title": "个人借贷交易还款频率代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 62,
+      "row_count": 12,
+      "rows": [
+        {
+          "code": "01",
+          "label": "日",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "周",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "月",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "季",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "半年",
+          "description": ""
+        },
+        {
+          "code": "06",
+          "label": "年",
+          "description": ""
+        },
+        {
+          "code": "07",
+          "label": "一次性",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "不定期",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "旬",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "双周",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "双月",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.23",
+      "title": "个人贷款发放形式代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 62,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "新增",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "其他机构转入",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.24",
+      "title": "个人借贷交易担保方式代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 63,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "1",
+          "label": "质押",
+          "description": "一代中的“1-质押（含保证金）”对应此代码。"
+        },
+        {
+          "code": "2",
+          "label": "抵押",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "保证",
+          "description": "一代中的“3-自然人保证”对应此代码。"
+        },
+        {
+          "code": "4",
+          "label": "信用/免担保",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "组合(含保证)",
+          "description": "一代中的“5-组合（含自然人保证）” 对应此代码。"
+        },
+        {
+          "code": "6",
+          "label": "组合（不含保证）",
+          "description": "一代中的“6-组合（不含自然人保证）”对应此代"
+        },
+        {
+          "code": "7",
+          "label": "农户联保",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.25",
+      "title": "个人借贷交易共同借款标志代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 63,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "0",
+          "label": "无",
+          "description": "无共同借款人"
+        },
+        {
+          "code": "1",
+          "label": "主借款人",
+          "description": "有共同借款人，且本报告主体为主借款人"
+        },
+        {
+          "code": "2",
+          "label": "从借款人",
+          "description": "有共同借款人，且本报告主体为从借款人"
+        }
+      ]
+    },
+    {
+      "table_id": "A.26",
+      "title": "债权转移时的还款状态代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 63,
+      "row_count": 9,
+      "rows": [
+        {
+          "code": "0",
+          "label": "债务人即将违约时自动垫款",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "逾期",
+          "description": "1-30 天"
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": "31-60 天"
+        },
+        {
+          "code": "3",
+          "label": "逾期",
+          "description": "61-90 天"
+        },
+        {
+          "code": "4",
+          "label": "逾期",
+          "description": "91-120 天"
+        },
+        {
+          "code": "5",
+          "label": "逾期",
+          "description": "121-150 天"
+        },
+        {
+          "code": "6",
+          "label": "逾期",
+          "description": "151-180 天"
+        },
+        {
+          "code": "7",
+          "label": "逾期",
+          "description": "180 天以上"
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.27",
+      "title": "个人借贷账户状态代码表（D1 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 63,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "1",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "结清",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "呆账",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "转出",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "担保物不足",
+          "description": "一代中的“6-应补仓未补仓”对应此代码。"
+        },
+        {
+          "code": "7",
+          "label": "强制平仓",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "司法追偿",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.28",
+      "title": "个人借贷账户状态代码表（R1 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 64,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "1",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "结清",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "呆账",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "银行止付",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "担保物不足",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "司法追偿",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.29",
+      "title": "个人借贷账户状态代码表（R2/R3 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 64,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "1",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "冻结",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "止付",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "银行止付",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "销户",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "呆账",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "未激活",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "司法追偿",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.3",
+      "title": "个人信用报告机构查询原因代码",
+      "source_doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "source_page": 26,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "01",
+          "label": "贷后管理",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "贷款审批",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "信用卡审批",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "担保资格审查",
+          "description": ""
+        },
+        {
+          "code": "09",
+          "label": "司法调查",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "公积金提取复核查询",
+          "description": ""
+        },
+        {
+          "code": "18",
+          "label": "股指期货开户",
+          "description": ""
+        },
+        {
+          "code": "19",
+          "label": "特约商户实名审查",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "保前审查",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "保后管理",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "法人代表、负责人、高管等资信审查",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "客户准入资格审查",
+          "description": ""
+        },
+        {
+          "code": "24",
+          "label": "融资审批",
+          "description": ""
+        },
+        {
+          "code": "25",
+          "label": "资信审查",
+          "description": ""
+        },
+        {
+          "code": "26",
+          "label": "额度审批",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.3",
+      "title": "本机构报告数据查询原因代码",
+      "source_doc": "征信系统数据查询接口规格说明（本机构数据）.pdf",
+      "source_page": 13,
+      "row_count": 17,
+      "rows": [
+        {
+          "code": "01",
+          "label": "异议处理",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "数据质量核查",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "PBE001",
+          "label": "查询原因校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE002",
+          "label": "信息主体名称校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE003",
+          "label": "信息主体证件类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE004",
+          "label": "信息主体证件号码校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE005",
+          "label": "企业名称校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE006",
+          "label": "企业身份标识类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE007",
+          "label": "企业身份标识号码校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE008",
+          "label": "查询机构校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE009",
+          "label": "发起机构校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE015",
+          "label": "查询用户代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBE016",
+          "label": "发起用户代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBO001",
+          "label": "报文发送机构代码与查询机构代码不一致",
+          "description": ""
+        },
+        {
+          "code": "PBO002",
+          "label": "机构代理关系校验错误",
+          "description": ""
+        },
+        {
+          "code": "PBO005",
+          "label": "查询机构与发起机构关系校验错误，即二者非同一机构且无代理或所属关系",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.3",
+      "title": "防欺诈警示标志代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 56,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "0",
+          "label": "否",
+          "description": "代表没有防欺诈警示信息。"
+        },
+        {
+          "code": "1",
+          "label": "是",
+          "description": "代表存在防欺诈警示信息。"
+        }
+      ]
+    },
+    {
+      "table_id": "A.30",
+      "title": "个人借贷账户状态代码表（R4 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 64,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "1",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "结清",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "呆账",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "担保物不足",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "司法追偿",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.31",
+      "title": "个人借贷账户状态代码表（C1 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 64,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "催收",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "结束",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.32",
+      "title": "五级分类代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 65,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "1",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "关注",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "次级",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "可疑",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "损失",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "违约",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未分类",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.33",
+      "title": "个人借贷账户还款状态代码表（D1/R4 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 65,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "*",
+          "label": "当月不需要还款且之前没有拖欠",
+          "description": ""
+        },
+        {
+          "code": "N",
+          "label": "正常还款",
+          "description": "表示借款人已经按时归还该月应还款金额的全部，"
+        },
+        {
+          "code": "Z",
+          "label": "以资抵债",
+          "description": "表示借款人当月的欠款已通过以资抵债的方式还"
+        },
+        {
+          "code": "M",
+          "label": "约定还款日后月底前还款",
+          "description": "表示截止信息报告日期，借款人已还清所有逾期款"
+        },
+        {
+          "code": "1",
+          "label": "逾期",
+          "description": "1-30 天"
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": "31-60 天"
+        },
+        {
+          "code": "3",
+          "label": "逾期",
+          "description": "61-90 天"
+        },
+        {
+          "code": "4",
+          "label": "逾期",
+          "description": "91-120 天"
+        },
+        {
+          "code": "5",
+          "label": "逾期",
+          "description": "121-150 天"
+        },
+        {
+          "code": "6",
+          "label": "逾期",
+          "description": "151-180 天"
+        },
+        {
+          "code": "7",
+          "label": "逾期",
+          "description": "180 天以上"
+        },
+        {
+          "code": "B",
+          "label": "呆账",
+          "description": "长期不还款，具体逾期天数未知。"
+        },
+        {
+          "code": "C",
+          "label": "结清",
+          "description": "借款人该笔贷款全部还清，贷款余额为 0。"
+        },
+        {
+          "code": "G",
+          "label": "结束",
+          "description": "结清除外， 其他形式的债权关系解除， 如资产剥离。"
+        },
+        {
+          "code": "#",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.34",
+      "title": "个人借贷账户还款状态代码表（R1 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 65,
+      "row_count": 16,
+      "rows": [
+        {
+          "code": "*",
+          "label": "当月未使用额度且不需要还款",
+          "description": "上月余额为 0，且本月没有新增借款。"
+        },
+        {
+          "code": "N",
+          "label": "正常还款",
+          "description": ""
+        },
+        {
+          "code": "D",
+          "label": "担保人代还",
+          "description": ""
+        },
+        {
+          "code": "Z",
+          "label": "以资抵债",
+          "description": ""
+        },
+        {
+          "code": "M",
+          "label": "约定还款日后月底前还款",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "逾期",
+          "description": "1-30 天"
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": "31-60 天"
+        },
+        {
+          "code": "3",
+          "label": "逾期",
+          "description": "61-90 天"
+        },
+        {
+          "code": "4",
+          "label": "逾期",
+          "description": "91-120 天"
+        },
+        {
+          "code": "5",
+          "label": "逾期",
+          "description": "121-150 天"
+        },
+        {
+          "code": "6",
+          "label": "逾期",
+          "description": "151-180 天"
+        },
+        {
+          "code": "7",
+          "label": "逾期",
+          "description": "180 天以上"
+        },
+        {
+          "code": "B",
+          "label": "呆账",
+          "description": "长期不还款，具体逾期天数未知。"
+        },
+        {
+          "code": "C",
+          "label": "正常销户",
+          "description": ""
+        },
+        {
+          "code": "G",
+          "label": "结束",
+          "description": ""
+        },
+        {
+          "code": "#",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.35",
+      "title": "个人借贷账户还款状态代码表（R2 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 66,
+      "row_count": 14,
+      "rows": [
+        {
+          "code": "*",
+          "label": "当月未使用额度且不需要还款",
+          "description": "上期账单余额为 0，且本期没有新增消费。"
+        },
+        {
+          "code": "N",
+          "label": "正常还款",
+          "description": ""
+        },
+        {
+          "code": "A",
+          "label": "账单日调整，当月不出单",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "逾期",
+          "description": "1-30 天"
+        },
+        {
+          "code": "2",
+          "label": "逾期",
+          "description": "31-60 天"
+        },
+        {
+          "code": "3",
+          "label": "逾期",
+          "description": "61-90 天"
+        },
+        {
+          "code": "4",
+          "label": "逾期",
+          "description": "91-120 天"
+        },
+        {
+          "code": "5",
+          "label": "逾期",
+          "description": "121-150 天"
+        },
+        {
+          "code": "6",
+          "label": "逾期",
+          "description": "151-180 天"
+        },
+        {
+          "code": "7",
+          "label": "逾期",
+          "description": "180 天以上"
+        },
+        {
+          "code": "B",
+          "label": "呆账",
+          "description": "长期不还款，具体逾期天数未知。"
+        },
+        {
+          "code": "C",
+          "label": "正常销户",
+          "description": ""
+        },
+        {
+          "code": "G",
+          "label": "结束",
+          "description": "除正常销户外，其他形式的债权关系解除，如资产"
+        },
+        {
+          "code": "#",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.36",
+      "title": "个人借贷账户还款状态代码表（R3 账户）",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 67,
+      "row_count": 13,
+      "rows": [
+        {
+          "code": "*",
+          "label": "本月没有透支行为且上月该账户没有",
+          "description": ""
+        },
+        {
+          "code": "N",
+          "label": "正常",
+          "description": "准贷记卡透支后还清。"
+        },
+        {
+          "code": "1",
+          "label": "透支",
+          "description": "1-30 天"
+        },
+        {
+          "code": "2",
+          "label": "透支",
+          "description": "31-60 天"
+        },
+        {
+          "code": "3",
+          "label": "透支",
+          "description": "61-90 天"
+        },
+        {
+          "code": "4",
+          "label": "透支",
+          "description": "91-120 天"
+        },
+        {
+          "code": "5",
+          "label": "透支",
+          "description": "121-150 天"
+        },
+        {
+          "code": "6",
+          "label": "透支",
+          "description": "151-180 天"
+        },
+        {
+          "code": "7",
+          "label": "透支",
+          "description": "180 天以上"
+        },
+        {
+          "code": "B",
+          "label": "呆账",
+          "description": "长期不还款，具体逾期天数未知。"
+        },
+        {
+          "code": "C",
+          "label": "正常销户",
+          "description": ""
+        },
+        {
+          "code": "G",
+          "label": "结束",
+          "description": ""
+        },
+        {
+          "code": "#",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.37",
+      "title": "个人借贷特殊交易类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 67,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "1",
+          "label": "展期",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "担保人（第三方）代偿",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "以资抵债",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "提前还款",
+          "description": "包括提前归还部分本金、还款期限不变，以及缩短"
+        },
+        {
+          "code": "5",
+          "label": "提前结清",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "强制平仓，未结清",
+          "description": ""
+        },
+        {
+          "code": "7",
+          "label": "强制平仓，已结清",
+          "description": ""
+        },
+        {
+          "code": "8",
+          "label": "司法追偿",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "债务减免",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "资产剥离",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "资产转让",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "信用卡个性化分期",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "银行主动延期",
+          "description": ""
+        },
+        {
+          "code": "17",
+          "label": "强制平仓",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.38",
+      "title": "个人借贷交易特殊事件类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "11",
+          "label": "信用卡因调整账单日本月不出单",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "已注销信用卡账户重启",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.39",
+      "title": "标注及声明类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "1",
+          "label": "异议标注",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "特殊标注",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "本人声明",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "机构说明",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "征信中心说明",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.4",
+      "title": "企业信用报告机构查询原因代码",
+      "source_doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "source_page": 26,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "01",
+          "label": "贷前（保前）审查",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "贷中操作",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "贷后（在保）管理",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "其他原因",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "关联查询",
+          "description": ""
+        },
+        {
+          "code": "17",
+          "label": "额度审批",
+          "description": ""
+        },
+        {
+          "code": "18",
+          "label": "担保审查",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.4",
+      "title": "查询原因代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 57,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "01",
+          "label": "贷后管理",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "贷款审批",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "信用卡审批",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "担保资格审查",
+          "description": ""
+        },
+        {
+          "code": "09",
+          "label": "司法调查",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "公积金提取复核查询",
+          "description": ""
+        },
+        {
+          "code": "18",
+          "label": "股指期货开户",
+          "description": ""
+        },
+        {
+          "code": "19",
+          "label": "特约商户实名审查",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "保前审查",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "保后管理",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "法人代表、负责人、高管等资信审查",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "客户准入资格审查",
+          "description": ""
+        },
+        {
+          "code": "24",
+          "label": "融资审批",
+          "description": ""
+        },
+        {
+          "code": "25",
+          "label": "资信审查",
+          "description": ""
+        },
+        {
+          "code": "26",
+          "label": "额度审批",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.40",
+      "title": "个人授信额度用途代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 4,
+      "rows": [
+        {
+          "code": "10",
+          "label": "循环贷款额度",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "非循环贷款额度",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "信用卡共享额度",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "信用卡独立额度",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.41",
+      "title": "个人授信协议状态代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "有效",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "到期/失效",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.42",
+      "title": "个人借贷业务大类代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "1",
+          "label": "贷款",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "信用卡",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "证券类融资",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "融资租赁",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "资产处置",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "垫款",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.43",
+      "title": "企业借贷业务大类代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 68,
+      "row_count": 11,
+      "rows": [
+        {
+          "code": "10",
+          "label": "企业债",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "贷款",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "贸易融资",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "保理融资",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "融资租赁",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "证券类融资",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "透支",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "票据贴现",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "黄金借贷",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "垫款",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "资产处置",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.44",
+      "title": "相关还款责任人类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 69,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "1",
+          "label": "共同借款人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "保证人",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "票据承兑人",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "应收账款债务人",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "供应链中核心企业",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.45",
+      "title": "后付费账户类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 69,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "TE",
+          "label": "电信缴费账户",
+          "description": ""
+        },
+        {
+          "code": "UE",
+          "label": "公用事业缴费账户",
+          "description": "预留"
+        }
+      ]
+    },
+    {
+      "table_id": "A.46",
+      "title": "电信缴费业务类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 69,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "1",
+          "label": "固定电话",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "移动电话",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "互联网接入",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "数据专线及集群业务",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "卫星业务",
+          "description": "包括卫星广播电视、卫星导航定位等业务。"
+        },
+        {
+          "code": "6",
+          "label": "组合业务",
+          "description": "指以上两种或多种业务合并计费的情况。"
+        },
+        {
+          "code": "0",
+          "label": "其他业务",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.47",
+      "title": "公用事业缴费业务类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 69,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "01",
+          "label": "电力",
+          "description": "预留"
+        },
+        {
+          "code": "02",
+          "label": "自来水",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "燃气",
+          "description": "预留"
+        },
+        {
+          "code": "04",
+          "label": "有线电视",
+          "description": "预留"
+        },
+        {
+          "code": "05",
+          "label": "城市垃圾处理",
+          "description": "预留"
+        },
+        {
+          "code": "06",
+          "label": "物业管理",
+          "description": "预留"
+        },
+        {
+          "code": "07",
+          "label": "暖气",
+          "description": "预留"
+        },
+        {
+          "code": "99",
+          "label": "其他",
+          "description": "预留"
+        }
+      ]
+    },
+    {
+      "table_id": "A.48",
+      "title": "后付费业务当前缴费状态代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 70,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "0",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "欠费",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.49",
+      "title": "电信缴费账户最近24 个月缴费状态代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 70,
+      "row_count": 12,
+      "rows": [
+        {
+          "code": "#",
+          "label": "未知",
+          "description": ""
+        },
+        {
+          "code": "*",
+          "label": "服务已开通但本月不需缴费",
+          "description": ""
+        },
+        {
+          "code": "N",
+          "label": "正常",
+          "description": ""
+        },
+        {
+          "code": "0",
+          "label": "欠费超过宽限期不足",
+          "description": "1 个月"
+        },
+        {
+          "code": "1",
+          "label": "欠费超过宽限期",
+          "description": "1 个月不足 2 个月"
+        },
+        {
+          "code": "2",
+          "label": "欠费超过宽限期",
+          "description": "2 个月不足 3 个月"
+        },
+        {
+          "code": "3",
+          "label": "欠费超过宽限期",
+          "description": "3 个月不足 4 个月"
+        },
+        {
+          "code": "4",
+          "label": "欠费超过宽限期",
+          "description": "4 个月不足 5 个月"
+        },
+        {
+          "code": "5",
+          "label": "欠费超过宽限期",
+          "description": "5 个月不足 6 个月"
+        },
+        {
+          "code": "6",
+          "label": "欠费超过宽限期",
+          "description": "6 个月以上"
+        },
+        {
+          "code": "C",
+          "label": "销户",
+          "description": "结清后的销户。"
+        },
+        {
+          "code": "G",
+          "label": "结束",
+          "description": "非正常结清销户不能继续报送的。"
+        }
+      ]
+    },
+    {
+      "table_id": "A.5",
+      "title": "居住状况代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 57,
+      "row_count": 10,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自置",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "按揭",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "亲属楼宇",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "集体宿舍",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "租房",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "共有住宅",
+          "description": ""
+        },
+        {
+          "code": "7",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "自有",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "借住",
+          "description": "无法区分具体借住类型的情况，返回此代码。"
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.5",
+      "title": "批量文件处理状态代码",
+      "source_doc": "征信系统数据查询接口规格说明（信用报告）2019-09.pdf",
+      "source_page": 27,
+      "row_count": 22,
+      "rows": [
+        {
+          "code": "DBE001",
+          "label": "查询原因校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE002",
+          "label": "信息主体名称校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE003",
+          "label": "信息主体证件类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE004",
+          "label": "信息主体证件号码校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE005",
+          "label": "企业名称校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE006",
+          "label": "企业身份标识类型校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE007",
+          "label": "企业身份标识号码校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE008",
+          "label": "查询机构校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE009",
+          "label": "发起机构校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE010",
+          "label": "查询机构与中心未签署服务协议",
+          "description": ""
+        },
+        {
+          "code": "DBE011",
+          "label": "查询机构与中心签署服务协议不适用本次查询",
+          "description": ""
+        },
+        {
+          "code": "DBE012",
+          "label": "发起机构与中心未签署服务协议",
+          "description": ""
+        },
+        {
+          "code": "DBE013",
+          "label": "发起机构与中心签署服务协议不适用本次查询",
+          "description": ""
+        },
+        {
+          "code": "DBE014",
+          "label": "服务代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE015",
+          "label": "查询用户代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE016",
+          "label": "发起用户代码校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBE017",
+          "label": "信息记录标识号校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBO001",
+          "label": "报文发送机构代码与查询机构代码不一致",
+          "description": ""
+        },
+        {
+          "code": "DBO002",
+          "label": "机构代理关系校验错误",
+          "description": ""
+        },
+        {
+          "code": "DBO003",
+          "label": "批量查询请求文件记录数超过",
+          "description": "2000 条"
+        },
+        {
+          "code": "DBO004",
+          "label": "信用报告超长，仅提供部分信息",
+          "description": ""
+        },
+        {
+          "code": "DBO005",
+          "label": "查询机构与发起机构关系校验错误，即二者非同一机构且无代理或所属关系",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.50",
+      "title": "民事判决结案方式代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 70,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "1",
+          "label": "判决",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "调解",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.51",
+      "title": "强制执行结案方式代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 70,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "001",
+          "label": "不予执行",
+          "description": ""
+        },
+        {
+          "code": "002",
+          "label": "自动履行",
+          "description": ""
+        },
+        {
+          "code": "003",
+          "label": "和解履行完毕",
+          "description": ""
+        },
+        {
+          "code": "004",
+          "label": "执行完毕",
+          "description": ""
+        },
+        {
+          "code": "005",
+          "label": "终结执行",
+          "description": ""
+        },
+        {
+          "code": "006",
+          "label": "提级执行",
+          "description": ""
+        },
+        {
+          "code": "007",
+          "label": "指定执行",
+          "description": ""
+        },
+        {
+          "code": "255",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.52",
+      "title": "住房公积金缴费状态代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 71,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "1",
+          "label": "缴交",
+          "description": "代表该账户处于活动状态。"
+        },
+        {
+          "code": "2",
+          "label": "封存",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "销户",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.53",
+      "title": "低保救助人员类别代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 71,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "1",
+          "label": "在职职工",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "离岗",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "失业",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "离退休人员",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "三无人员",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "居民",
+          "description": ""
+        },
+        {
+          "code": "7",
+          "label": "学生",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.54",
+      "title": "职业资格等级代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 71,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "2",
+          "label": "省市级机构或行业协会颁发的执业资",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "其他机构颁发的执业资格证书",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.55",
+      "title": "标注及声明对象类型代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 71,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "报告",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "数据块",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.56",
+      "title": "标注及声明对象标识代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 72,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "1",
+          "label": "报告",
+          "description": ""
+        },
+        {
+          "code": "201",
+          "label": "身份信息",
+          "description": ""
+        },
+        {
+          "code": "202",
+          "label": "婚姻信息",
+          "description": ""
+        },
+        {
+          "code": "203",
+          "label": "居住信息",
+          "description": ""
+        },
+        {
+          "code": "204",
+          "label": "职业信息",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.57",
+      "title": "世界各国和地区名称代码",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 72,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "AFG",
+          "label": "阿富汗",
+          "description": ""
+        },
+        {
+          "code": "ALB",
+          "label": "阿尔巴尼亚",
+          "description": ""
+        },
+        {
+          "code": "ARM",
+          "label": "亚美尼亚",
+          "description": ""
+        },
+        {
+          "code": "OTH",
+          "label": "其他地区",
+          "description": ""
+        },
+        {
+          "code": "991",
+          "label": "中国（含港澳台）",
+          "description": ""
+        },
+        {
+          "code": "992",
+          "label": "外国（不含港澳台）",
+          "description": ""
+        },
+        {
+          "code": "999",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.58",
+      "title": "行政区划代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 72,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "110000",
+          "label": "北京市",
+          "description": ""
+        },
+        {
+          "code": "120000",
+          "label": "天津市",
+          "description": ""
+        },
+        {
+          "code": "130000",
+          "label": "河北省",
+          "description": ""
+        },
+        {
+          "code": "710000",
+          "label": "台湾省",
+          "description": ""
+        },
+        {
+          "code": "810000",
+          "label": "香港特别行政区",
+          "description": ""
+        },
+        {
+          "code": "820000",
+          "label": "澳门特别行政区",
+          "description": ""
+        },
+        {
+          "code": "130103",
+          "label": "原“桥东区”",
+          "description": "原“130103-桥东区”对应此代码。"
+        },
+        {
+          "code": "320304",
+          "label": "原“九里区”",
+          "description": "原“320304-九里区”对应此代码。"
+        }
+      ]
+    },
+    {
+      "table_id": "A.59",
+      "title": "币种代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 73,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "ADP",
+          "label": "安道尔比塞塔",
+          "description": ""
+        },
+        {
+          "code": "AED",
+          "label": "UAE",
+          "description": "迪拉姆"
+        },
+        {
+          "code": "AFA",
+          "label": "阿富汗尼",
+          "description": ""
+        },
+        {
+          "code": "ALL",
+          "label": "列克",
+          "description": ""
+        },
+        {
+          "code": "AMD",
+          "label": "亚美尼亚达姆",
+          "description": ""
+        },
+        {
+          "code": "ZWD",
+          "label": "津巴布韦元",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.6",
+      "title": "单位性质代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 57,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "10",
+          "label": "机关、事业单位",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "国有企业",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "外资企业",
+          "description": ""
+        },
+        {
+          "code": "40",
+          "label": "个体、私营企业",
+          "description": ""
+        },
+        {
+          "code": "50",
+          "label": "其他（包括三资企业、民营企业、民间",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.60",
+      "title": "性别代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 73,
+      "row_count": 4,
+      "rows": [
+        {
+          "code": "0",
+          "label": "未知",
+          "description": "无法明确为男或女的其他性别。"
+        },
+        {
+          "code": "1",
+          "label": "男",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "女",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未说明",
+          "description": "性别信息无法获知。"
+        }
+      ]
+    },
+    {
+      "table_id": "A.61",
+      "title": "学历代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 73,
+      "row_count": 8,
+      "rows": [
+        {
+          "code": "10",
+          "label": "研究生",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "本科",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "大专",
+          "description": ""
+        },
+        {
+          "code": "40",
+          "label": "中专、职高、技校",
+          "description": "一代中“50-技术学校”对应此代码。"
+        },
+        {
+          "code": "60",
+          "label": "高中",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "91",
+          "label": "初中及以下",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.62",
+      "title": "学位代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 74,
+      "row_count": 7,
+      "rows": [
+        {
+          "code": "0",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "名誉博士",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "博士",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "硕士",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "学士",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "无",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.63",
+      "title": "就业状况代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 74,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "11",
+          "label": "国家公务员",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "专业技术人员",
+          "description": ""
+        },
+        {
+          "code": "17",
+          "label": "职员",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "企业管理人员",
+          "description": ""
+        },
+        {
+          "code": "24",
+          "label": "工人",
+          "description": ""
+        },
+        {
+          "code": "27",
+          "label": "农民",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "学生",
+          "description": ""
+        },
+        {
+          "code": "37",
+          "label": "现役军人",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "自由职业者",
+          "description": ""
+        },
+        {
+          "code": "54",
+          "label": "个体经营者",
+          "description": ""
+        },
+        {
+          "code": "70",
+          "label": "无业人员",
+          "description": ""
+        },
+        {
+          "code": "80",
+          "label": "退（离）休人员",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "91",
+          "label": "在职",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.64",
+      "title": "婚姻状况代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 74,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "10",
+          "label": "未婚",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "已婚",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "丧偶",
+          "description": ""
+        },
+        {
+          "code": "40",
+          "label": "离婚",
+          "description": ""
+        },
+        {
+          "code": "91",
+          "label": "单身",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.65",
+      "title": "国民经济行业代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 75,
+      "row_count": 35,
+      "rows": [
+        {
+          "code": "A",
+          "label": "农、林、牧、渔业",
+          "description": ""
+        },
+        {
+          "code": "B",
+          "label": "采矿业",
+          "description": ""
+        },
+        {
+          "code": "C",
+          "label": "制造业",
+          "description": ""
+        },
+        {
+          "code": "D",
+          "label": "电力、热力、燃气及水生产和供应业",
+          "description": ""
+        },
+        {
+          "code": "E",
+          "label": "建筑业",
+          "description": ""
+        },
+        {
+          "code": "F",
+          "label": "批发和零售业",
+          "description": "一代中的“H-批发和零售”对应此代码。"
+        },
+        {
+          "code": "G",
+          "label": "交通运输、仓储和邮储业",
+          "description": "一代中的“F-交通运输、仓储和邮储业”对应此代"
+        },
+        {
+          "code": "H",
+          "label": "住宿和餐饮业",
+          "description": "一代中的“I-住宿和餐饮业”对应此代码。"
+        },
+        {
+          "code": "I",
+          "label": "信息传输、软件和信息技术服务业",
+          "description": "一代中的“G-信息传输、计算机服务和软件业”对"
+        },
+        {
+          "code": "J",
+          "label": "金融业",
+          "description": ""
+        },
+        {
+          "code": "K",
+          "label": "房地产业",
+          "description": ""
+        },
+        {
+          "code": "L",
+          "label": "租赁和商务服务业",
+          "description": ""
+        },
+        {
+          "code": "M",
+          "label": "科学研究和技术服务业",
+          "description": ""
+        },
+        {
+          "code": "N",
+          "label": "水利、环境和公共设施管理业",
+          "description": ""
+        },
+        {
+          "code": "O",
+          "label": "居民服务、修理和其他服务业",
+          "description": ""
+        },
+        {
+          "code": "P",
+          "label": "教育",
+          "description": ""
+        },
+        {
+          "code": "Q",
+          "label": "卫生和社会工作",
+          "description": ""
+        },
+        {
+          "code": "R",
+          "label": "文化、体育和娱乐业",
+          "description": ""
+        },
+        {
+          "code": "S",
+          "label": "公共管理、社会保障和社会组织",
+          "description": ""
+        },
+        {
+          "code": "T",
+          "label": "国际组织",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": "一代中的“Z-未知”对应此代码。"
+        },
+        {
+          "code": "PC030H",
+          "label": "[1..*]",
+          "description": "参见表 B- 71"
+        },
+        {
+          "code": "PC05BS01",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS02",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS03",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS04",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS05",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS06",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS07",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "PC05BS08",
+          "label": "[1..1]",
+          "description": "无"
+        },
+        {
+          "code": "2018",
+          "label": "年",
+          "description": "6 月第1 次修订，较 2017 年8 月首次发布的版本，除文字上的编辑性调整外，"
+        },
+        {
+          "code": "2018",
+          "label": "年",
+          "description": "9 月第2 次修订，较2018 年6 月修订的版本，除文字上的编辑性调整外，主要"
+        },
+        {
+          "code": "1",
+          "label": "调整代码表或规范代码含义",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "勘误",
+          "description": ""
+        },
+        {
+          "code": "2019",
+          "label": "年",
+          "description": "9 月第3 次修订，较2018 年9 月修订的版本，除文字上的编辑性调整外，主要"
+        }
+      ]
+    },
+    {
+      "table_id": "A.7",
+      "title": "职业代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 58,
+      "row_count": 9,
+      "rows": [
+        {
+          "code": "1",
+          "label": "专业技术人员",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "办事人员和有关人员",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "商业、服务业人员",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "农、林、牧、渔、水利业生产人员",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "生产、运输设备操作人员及有关人员",
+          "description": ""
+        },
+        {
+          "code": "X",
+          "label": "军人",
+          "description": ""
+        },
+        {
+          "code": "Y",
+          "label": "不便分类的其他从业人员",
+          "description": ""
+        },
+        {
+          "code": "Z",
+          "label": "未知",
+          "description": ""
+        },
+        {
+          "code": "0",
+          "label": "国家机关、党群组织、企业、事业单位负责人",
+          "description": "manual_fix_from_official_appendix"
+        }
+      ]
+    },
+    {
+      "table_id": "A.8",
+      "title": "职务代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 58,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "1",
+          "label": "高级领导",
+          "description": "行政级别局级及以上领导或大公司高级管理人员。"
+        },
+        {
+          "code": "2",
+          "label": "中级领导",
+          "description": "行政级别处级领导或大公司中级管理人员。"
+        },
+        {
+          "code": "3",
+          "label": "一般员工",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "其他",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "A.9",
+      "title": "职称代码表",
+      "source_doc": "人民银行征信系统产品说明_个人信用报告（二代试行）202007修订.pdf",
+      "source_page": 58,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "0",
+          "label": "无",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "高级",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "中级",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "初级",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "未知",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.1",
+      "title": "企业身份标识类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 32,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.10",
+      "title": "企业借贷业务种类细分代码表（融资租赁）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 34,
+      "row_count": 1,
+      "rows": [
+        {
+          "code": "10",
+          "label": "融资型租赁",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.11",
+      "title": "企业借贷业务种类细分代码表（证券类融资）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 34,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "10",
+          "label": "约定购回式证券交易",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "股票质押融资",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他证券类融资",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.12",
+      "title": "企业借贷业务种类细分代码表（透支）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 34,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "10",
+          "label": "法人账户透支",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "支票账户透支",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.13",
+      "title": "企业借贷业务种类细分代码表（票据贴现）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "10",
+          "label": "有追索权的银行承兑汇票贴现",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "有追索权的商业承兑汇票贴现",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.14",
+      "title": "企业借贷业务种类细分代码表（黄金借贷）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 1,
+      "rows": [
+        {
+          "code": "10",
+          "label": "黄金借贷",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.15",
+      "title": "企业借贷业务种类细分代码表（垫款）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "10",
+          "label": "保函垫款",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "承兑汇票垫款",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "信用证垫款",
+          "description": ""
+        },
+        {
+          "code": "40",
+          "label": "保理垫款",
+          "description": ""
+        },
+        {
+          "code": "50",
+          "label": "担保代偿",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他垫款",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.16",
+      "title": "企业借贷业务种类细分代码表（资产处置）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 1,
+      "rows": [
+        {
+          "code": "10",
+          "label": "资产处置",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.17",
+      "title": "（反）担保方式代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "0",
+          "label": "信用/免担保",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "保证",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "质押",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "抵押",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "组合",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.18",
+      "title": "其他还款保证方式代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 35,
+      "row_count": 4,
+      "rows": [
+        {
+          "code": "0",
+          "label": "无",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "保证金",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "第三方付款承诺",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.19",
+      "title": "借贷账户相关还款责任人身份类别代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自然人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "组织机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.2",
+      "title": "相关还款责任人及抵（质）押物信息查询原因代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 32,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.20",
+      "title": "借贷账户相关还款责任人身份标识类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.21",
+      "title": "借贷账户相关还款责任人类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "2",
+          "label": "保证人",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "票据承兑人",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "应收账款债务人",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "供应链中核心企业",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.22",
+      "title": "联保标志代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "0",
+          "label": "单人保证/多人分保",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "联保",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.23",
+      "title": "担保账户类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 3,
+      "rows": [
+        {
+          "code": "G1",
+          "label": "融资担保账户",
+          "description": ""
+        },
+        {
+          "code": "G2",
+          "label": "非融资担保账户",
+          "description": ""
+        },
+        {
+          "code": "G3",
+          "label": "支付担保账户",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.24",
+      "title": "担保交易业务种类细分代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 36,
+      "row_count": 17,
+      "rows": [
+        {
+          "code": "01",
+          "label": "贷款担保",
+          "description": ""
+        },
+        {
+          "code": "02",
+          "label": "票据承兑担保",
+          "description": ""
+        },
+        {
+          "code": "03",
+          "label": "贸易融资担保",
+          "description": ""
+        },
+        {
+          "code": "04",
+          "label": "项目融资担保",
+          "description": ""
+        },
+        {
+          "code": "05",
+          "label": "信用证融资担保",
+          "description": ""
+        },
+        {
+          "code": "10",
+          "label": "债券发行担保",
+          "description": ""
+        },
+        {
+          "code": "06",
+          "label": "其他融资性担保",
+          "description": ""
+        },
+        {
+          "code": "07",
+          "label": "诉讼保全担保",
+          "description": ""
+        },
+        {
+          "code": "08",
+          "label": "履约担保",
+          "description": ""
+        },
+        {
+          "code": "09",
+          "label": "非融资性担保",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "再担保",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "贷款保证保险",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "信用证",
+          "description": ""
+        },
+        {
+          "code": "61",
+          "label": "银行承兑汇票",
+          "description": ""
+        },
+        {
+          "code": "62",
+          "label": "商业承兑汇票",
+          "description": ""
+        },
+        {
+          "code": "71",
+          "label": "融资类银行保函",
+          "description": ""
+        },
+        {
+          "code": "72",
+          "label": "非融资类银行保函",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.25",
+      "title": "担保账户相关还款责任人身份类别代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 37,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自然人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "组织机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.26",
+      "title": "担保账户相关还款责任人身份标识类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 37,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.27",
+      "title": "担保账户相关还款责任人类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 37,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "2",
+          "label": "反担保人",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.28",
+      "title": "抵（质）押合同类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 37,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "抵押合同",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "质押合同",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.29",
+      "title": "最高额担保标志代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 37,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "0",
+          "label": "否",
+          "description": ""
+        },
+        {
+          "code": "1",
+          "label": "是",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.3",
+      "title": "借贷账户类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 32,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "D1",
+          "label": "非循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "D2",
+          "label": "贴现账户",
+          "description": ""
+        },
+        {
+          "code": "R1",
+          "label": "循环贷账户",
+          "description": ""
+        },
+        {
+          "code": "R4",
+          "label": "循环额度下分账户",
+          "description": ""
+        },
+        {
+          "code": "C1",
+          "label": "催收账户",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.30",
+      "title": "抵（质）押合同状态代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "有效",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "到期/失效",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.31",
+      "title": "抵押物种类代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 5,
+      "rows": [
+        {
+          "code": "11",
+          "label": "房产",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "土地使用权（包含土地附着物）",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "交通运输设备",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "机器设备",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.32",
+      "title": "抵押物识别号类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 6,
+      "rows": [
+        {
+          "code": "1",
+          "label": "房产权证号",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "土地使用权证书号",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "建设用地规划许可证号",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "交通工具发动机号",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "交通工具营运执照号",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "机器设备规格型号",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.33",
+      "title": "评估机构类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自评估",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "第三方机构评估",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.34",
+      "title": "抵押人身份类别代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自然人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "组织机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.35",
+      "title": "抵押人身份标识类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 38,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.36",
+      "title": "质物种类代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 39,
+      "row_count": 11,
+      "rows": [
+        {
+          "code": "1",
+          "label": "现金及其等价物",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "贵金属",
+          "description": ""
+        },
+        {
+          "code": "3",
+          "label": "债权",
+          "description": ""
+        },
+        {
+          "code": "4",
+          "label": "票据",
+          "description": ""
+        },
+        {
+          "code": "5",
+          "label": "股权",
+          "description": ""
+        },
+        {
+          "code": "6",
+          "label": "基金",
+          "description": ""
+        },
+        {
+          "code": "7",
+          "label": "保单",
+          "description": ""
+        },
+        {
+          "code": "9",
+          "label": "流动资产（仓单、信用证、保函、其他）",
+          "description": ""
+        },
+        {
+          "code": "10",
+          "label": "无形资产",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "涉农质物",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "其他质物",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.37",
+      "title": "出质人身份类别代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 39,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "1",
+          "label": "自然人",
+          "description": ""
+        },
+        {
+          "code": "2",
+          "label": "组织机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.38",
+      "title": "出质人身份标识类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 39,
+      "row_count": 0,
+      "rows": []
+    },
+    {
+      "table_id": "D.4",
+      "title": "业务管理机构类型代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 32,
+      "row_count": 18,
+      "rows": [
+        {
+          "code": "11",
+          "label": "商业银行",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "村镇银行",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "住房储蓄银行",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "外资银行",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "财务公司",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "信托公司",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "融资租赁公司",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "汽车金融公司",
+          "description": ""
+        },
+        {
+          "code": "24",
+          "label": "消费金融公司",
+          "description": ""
+        },
+        {
+          "code": "25",
+          "label": "贷款公司",
+          "description": ""
+        },
+        {
+          "code": "26",
+          "label": "金融资产管理公司",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "证券公司",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "保险公司",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "小额贷款公司",
+          "description": ""
+        },
+        {
+          "code": "52",
+          "label": "公积金管理中心",
+          "description": ""
+        },
+        {
+          "code": "53",
+          "label": "融资性担保公司",
+          "description": ""
+        },
+        {
+          "code": "54",
+          "label": "保理公司",
+          "description": ""
+        },
+        {
+          "code": "99",
+          "label": "其他机构",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.5",
+      "title": "企业借贷业务大类代码表",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 33,
+      "row_count": 11,
+      "rows": [
+        {
+          "code": "10",
+          "label": "企业债",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "贷款",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "贸易融资",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "保理融资",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "融资租赁",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "证券类融资",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "透支",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "票据贴现",
+          "description": ""
+        },
+        {
+          "code": "31",
+          "label": "黄金借贷",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "垫款",
+          "description": ""
+        },
+        {
+          "code": "51",
+          "label": "资产处置",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.6",
+      "title": "企业借贷业务种类细分代码表（企业债）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 33,
+      "row_count": 4,
+      "rows": [
+        {
+          "code": "10",
+          "label": "非金融企业债务融资工具",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "上市公司债",
+          "description": ""
+        },
+        {
+          "code": "30",
+          "label": "发改委审核发行企业债",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他公司信用债",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.7",
+      "title": "企业借贷业务种类细分代码表（贷款）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 33,
+      "row_count": 9,
+      "rows": [
+        {
+          "code": "11",
+          "label": "流动资金贷款",
+          "description": ""
+        },
+        {
+          "code": "12",
+          "label": "固定资产贷款",
+          "description": ""
+        },
+        {
+          "code": "13",
+          "label": "境外筹资转贷",
+          "description": ""
+        },
+        {
+          "code": "14",
+          "label": "国内买方信贷",
+          "description": ""
+        },
+        {
+          "code": "15",
+          "label": "出口卖方信贷",
+          "description": ""
+        },
+        {
+          "code": "16",
+          "label": "项目融资",
+          "description": ""
+        },
+        {
+          "code": "17",
+          "label": "并购贷款",
+          "description": ""
+        },
+        {
+          "code": "18",
+          "label": "创业担保贷款",
+          "description": ""
+        },
+        {
+          "code": "90",
+          "label": "其他贷款",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "table_id": "D.8",
+      "title": "企业借贷业务种类细分代码表（贸易融资）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 33,
+      "row_count": 15,
+      "rows": [
+        {
+          "code": "10",
+          "label": "进口类",
+          "description": ""
+        },
+        {
+          "code": "11",
+          "label": "进口押汇",
+          "description": ""
+        },
+        {
+          "code": "19",
+          "label": "其他进口类融资",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "出口类",
+          "description": ""
+        },
+        {
+          "code": "21",
+          "label": "出口打包放款",
+          "description": ""
+        },
+        {
+          "code": "22",
+          "label": "出口押汇",
+          "description": ""
+        },
+        {
+          "code": "23",
+          "label": "出口票据贴现",
+          "description": ""
+        },
+        {
+          "code": "25",
+          "label": "国际订单融资",
+          "description": ""
+        },
+        {
+          "code": "29",
+          "label": "其他出口类融资",
+          "description": "不含保理。"
+        },
+        {
+          "code": "31",
+          "label": "国内买方押汇",
+          "description": ""
+        },
+        {
+          "code": "39",
+          "label": "其他国内买方融资",
+          "description": ""
+        },
+        {
+          "code": "41",
+          "label": "国内打包贷款",
+          "description": ""
+        },
+        {
+          "code": "42",
+          "label": "国内订单融资",
+          "description": ""
+        },
+        {
+          "code": "43",
+          "label": "国内卖方押汇",
+          "description": ""
+        },
+        {
+          "code": "49",
+          "label": "其他国内卖方融资",
+          "description": "不含保理。"
+        }
+      ]
+    },
+    {
+      "table_id": "D.9",
+      "title": "企业借贷业务种类细分代码表（保理融资）",
+      "source_doc": "征信系统数据查询接口规格说明（相关还款责任人及抵（质）押物信息）2019-09.pdf",
+      "source_page": 34,
+      "row_count": 2,
+      "rows": [
+        {
+          "code": "10",
+          "label": "有追索权的出口保理融资",
+          "description": ""
+        },
+        {
+          "code": "20",
+          "label": "有追索权的国内卖方保理融资",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

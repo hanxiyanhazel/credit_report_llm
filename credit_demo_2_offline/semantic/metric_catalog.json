@@ -1,0 +1,82 @@
+{
+  "catalog_version": "metric_catalog.v2",
+  "report_type": "individual",
+  "metrics": [
+    {
+      "metric_name": "overdue_window_stats",
+      "metric_name_cn": "逾期窗口统计",
+      "definition": "按账户-月份口径双轨统计：普通逾期(1-7)与特殊风险状态(B/D/G)分开输出；连续逾期仅按普通逾期且按月份连续计算。",
+      "required_table": "account_history",
+      "required_fields": [
+        "period_date",
+        "repay_type",
+        "overdue_total",
+        "overdue_principal",
+        "overdue_months"
+      ],
+      "time_window": "1/3/6/12/24m"
+    },
+    {
+      "metric_name": "query_window_stats",
+      "metric_name_cn": "查询明细窗口统计",
+      "definition": "按 PH01 明细统计查询次数、原因分布及机构类型关键词计数；对 1 个月/24 个月窗口附带 PC05 对账结果。",
+      "required_table": "query_record",
+      "required_fields": ["query_date", "query_reason", "query_type", "query_institution"],
+      "related_summary_table": "credit_summary",
+      "related_summary_fields": ["PC05BS01", "PC05BS02", "PC05BS03", "PC05BS04", "PC05BS05", "PC05BS06", "PC05BS07", "PC05BS08"],
+      "time_window": "1/3/6/12/24m"
+    },
+    {
+      "metric_name": "query_summary_pc05",
+      "metric_name_cn": "查询概要统计",
+      "definition": "直接读取 PC05 概要字段回答最近1个月/最近2年的汇总问题。",
+      "required_table": "credit_summary",
+      "required_fields": ["PC05BS01", "PC05BS02", "PC05BS03", "PC05BS04", "PC05BS05", "PC05BS06", "PC05BS07", "PC05BS08"]
+    },
+    {
+      "metric_name": "outstanding_balance_summary",
+      "metric_name_cn": "未结清账户余额汇总",
+      "definition": "主口径优先使用 PC02 概要（未结清/未销户），输出主口径与含相关还款责任扩展口径。",
+      "required_table": "credit_summary",
+      "required_fields": ["PC02BJ01", "PC02EJ02", "PC02FJ02", "PC02GJ02", "PC02HJ04", "PC02IJ04", "PC02KJ02"]
+    },
+    {
+      "metric_name": "outstanding_loan_amount_summary",
+      "metric_name_cn": "未结清贷款借款金额（字段口径）",
+      "definition": "按明细 original_amount 字段统计非循环贷账户+循环额度下分账户未结清借款金额。",
+      "required_table": "credit_account",
+      "required_fields": ["account_category", "close_date", "account_status", "original_amount", "balance"]
+    },
+    {
+      "metric_name": "loan_classification_summary",
+      "metric_name_cn": "贷款分类汇总",
+      "definition": "基于 credit_account 衍生字段 loan_classification 统计各类贷款账户数、借款金额和余额；可切换未结清作用域。",
+      "required_table": "credit_account",
+      "required_fields": ["loan_classification", "is_loan_account", "is_outstanding_account", "original_amount", "balance"]
+    },
+    {
+      "metric_name": "address_consistency_profile",
+      "metric_name_cn": "地址一致性画像",
+      "definition": "提取通讯/户籍/最新居住/最新单位地址并判断居住地址与单位地址是否同省市；脱敏或缺失时返回无法判断。",
+      "required_table": "residence_info",
+      "required_fields": ["residence_address", "update_date"],
+      "related_tables": ["identity_info", "occupation_info"]
+    },
+    {
+      "metric_name": "card_special_events",
+      "metric_name_cn": "信用卡特殊事件识别",
+      "definition": "基于 special_transaction 识别信用卡个性化分期、展期及负面特殊事件。",
+      "required_table": "special_transaction",
+      "required_fields": ["is_card_related", "special_type", "special_description", "special_date", "has_personalized_installment", "has_extension", "is_negative_event"]
+    },
+    {
+      "metric_name": "objection_summary",
+      "metric_name_cn": "异议汇总与对账",
+      "definition": "首页报告级在途异议总数优先以首页异议信息提示为主；PG010S01 仅作结构化对账参考。POS 明细用于在途定位与解释，并返回首页-结构化-明细三层对账结果。",
+      "required_table": "objection_record",
+      "required_fields": ["objection_text", "annotation_category", "is_objection_candidate", "is_in_transit"],
+      "related_summary_table": "credit_summary",
+      "related_summary_fields": ["PG010S01"]
+    }
+  ]
+}

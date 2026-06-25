@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Credit Demo 2 · SQL Query</title>
+    <link rel="stylesheet" href="/web/style.css?v=20260515-1" />
+  </head>
+  <body>
+    <header id="topbar">
+      <div class="row">
+        <label>报告类型</label>
+        <select id="reportType">
+          <option value="individual">个人报告（可用）</option>
+          <option value="corporate" disabled>企业报告（V1占位）</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>当前报告</label>
+        <select id="reportSelect"></select>
+      </div>
+      <div class="row">
+        <label>上传 XML+PDF</label>
+        <input id="xmlFile" type="file" accept=".xml" />
+        <input id="pdfFile" type="file" accept=".pdf" />
+        <input id="customerName" type="text" placeholder="客户名称（可选）" />
+        <button id="uploadBtn">上传并解析</button>
+      </div>
+      <div id="topStatus"></div>
+    </header>
+
+    <div id="app">
+      <aside id="left">
+        <h3>提问示例</h3>
+        <div id="samples"></div>
+        <h3>会话</h3>
+        <button id="newChatBtn">开启新对话</button>
+        <ul id="historyList"></ul>
+      </aside>
+
+      <main id="center">
+        <div id="messages"></div>
+        <div id="composer">
+          <textarea id="questionInput" rows="3" placeholder="请输入问题（Enter发送，Shift+Enter换行）"></textarea>
+          <button id="sendBtn">发送</button>
+        </div>
+      </main>
+
+      <aside id="right">
+        <h3>本次回答元信息</h3>
+        <div class="kv"><span>answer_mode</span><code id="metaAnswerMode">-</code></div>
+        <div class="kv"><span>question_type</span><code id="metaQuestionType">-</code></div>
+        <div class="kv"><span>confidence</span><code id="metaConfidence">-</code></div>
+        <div class="kv"><span>verifier_status</span><code id="metaVerifier">-</code></div>
+        <div class="kv"><span>cannot_answer_reason</span><code id="metaReason">-</code></div>
+        <div class="kv block">
+          <span>evidence_paths</span>
+          <pre id="metaEvidence">[]</pre>
+        </div>
+        <div class="kv block">
+          <span>query_plan（计算口径）</span>
+          <pre id="metaQueryPlan">{}</pre>
+        </div>
+        <div class="kv block">
+          <span>query_result（结构化结果）</span>
+          <pre id="metaQueryResult">{}</pre>
+        </div>
+        <div class="kv block">
+          <span>第一阶段 Prompt</span>
+          <div class="prompt-panel">
+            <div class="prompt-subtitle">system prompt</div>
+            <pre id="metaPlannerSystemPrompt">-</pre>
+            <div class="prompt-subtitle">user prompt</div>
+            <pre id="metaPlannerPromptText">-</pre>
+            <div class="prompt-subtitle">阶段输出</div>
+            <pre id="metaPlannerOutput">{}</pre>
+          </div>
+        </div>
+        <div class="kv block">
+          <span>第二阶段 Prompt</span>
+          <div class="prompt-panel">
+            <div class="prompt-subtitle">system prompt</div>
+            <pre id="metaAnswerSystemPrompt">-</pre>
+            <div class="prompt-subtitle">user prompt</div>
+            <pre id="metaAnswerPromptText">-</pre>
+            <div class="prompt-subtitle">阶段输入</div>
+            <pre id="metaAnswerPayload">{}</pre>
+          </div>
+        </div>
+        <div class="kv block">
+          <span>原始 prompt_trace</span>
+          <pre id="metaPromptTrace">{}</pre>
+        </div>
+      </aside>
+    </div>
+
+    <script src="/web/app.js?v=20260515-4"></script>
+  </body>
+  </html>

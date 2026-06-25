@@ -1,0 +1,368 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "individual_standard_report.schema.json",
+  "title": "Individual Credit Report Standard Schema",
+  "description": "Standard-layer schema for individual credit reports. The structure is organized by logical table code and preserves table Chinese labels, field Chinese labels, raw field codes, and value/code semantics.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "report_type",
+    "source_files",
+    "tables"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "report_type": {
+      "const": "individual"
+    },
+    "source_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sourceFile"
+      }
+    },
+    "tables": {
+      "type": "object",
+      "required": [
+        "PA01"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "PA01": {
+          "$ref": "#/$defs/logicalTableSingle"
+        },
+        "PB01": {
+          "$ref": "#/$defs/logicalTableSingle"
+        },
+        "PB02": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PB03": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PB04": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PC02": {
+          "$ref": "#/$defs/logicalTableSingle"
+        },
+        "PC05": {
+          "$ref": "#/$defs/logicalTableSingle"
+        },
+        "PD01": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PD03": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PH01": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "PCE": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        },
+        "POS": {
+          "$ref": "#/$defs/logicalTableRepeated"
+        }
+      }
+    },
+    "raw_sections": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "required": [
+        "path",
+        "role"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "xml",
+            "pdf",
+            "schema_dictionary",
+            "question_list",
+            "other"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_table": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "valueMeta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value_source": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "xml_direct",
+            "xml_transformed",
+            "pdf_observed",
+            "manual_entry",
+            "unknown",
+            null
+          ]
+        },
+        "trace": {
+          "$ref": "#/$defs/trace"
+        },
+        "extra_fields": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "plainField": {
+      "type": "object",
+      "required": [
+        "field_code",
+        "field_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "field_code": {
+          "type": "string"
+        },
+        "field_name": {
+          "type": "string"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "array"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true
+            }
+          ]
+        },
+        "value_meta": {
+          "$ref": "#/$defs/valueMeta"
+        }
+      }
+    },
+    "codedField": {
+      "type": "object",
+      "required": [
+        "field_code",
+        "field_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "field_code": {
+          "type": "string"
+        },
+        "field_name": {
+          "type": "string"
+        },
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label_source": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "official_codebook",
+            "pdf_observed",
+            "manual_inference",
+            "unknown",
+            null
+          ]
+        },
+        "interpretation_status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "confirmed",
+            "candidate",
+            "unresolved",
+            null
+          ]
+        },
+        "value_meta": {
+          "$ref": "#/$defs/valueMeta"
+        }
+      }
+    },
+    "fieldValue": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/plainField"
+        },
+        {
+          "$ref": "#/$defs/codedField"
+        }
+      ]
+    },
+    "fieldMap": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/fieldValue"
+      }
+    },
+    "logicalTableSingle": {
+      "type": "object",
+      "required": [
+        "table_code",
+        "table_name",
+        "fields"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "table_code": {
+          "type": "string"
+        },
+        "table_name": {
+          "type": "string"
+        },
+        "table_label_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fields": {
+          "$ref": "#/$defs/fieldMap"
+        }
+      }
+    },
+    "logicalTableRecord": {
+      "type": "object",
+      "required": [
+        "fields"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "record_index": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "record_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fields": {
+          "$ref": "#/$defs/fieldMap"
+        }
+      }
+    },
+    "logicalTableRepeated": {
+      "type": "object",
+      "required": [
+        "table_code",
+        "table_name",
+        "records"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "table_code": {
+          "type": "string"
+        },
+        "table_name": {
+          "type": "string"
+        },
+        "table_label_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "summary_fields": {
+          "$ref": "#/$defs/fieldMap"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/logicalTableRecord"
+          }
+        }
+      }
+    }
+  }
+}
